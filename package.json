@@ -1,6 +1,6 @@
 {
   "name": "counter",
-  "home": "https://aguadebebe.github.io/counter/",
+  "homepage": "https://aguadebebe.github.io/counter/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
