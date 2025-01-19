@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Counter from "./Comps/Counter";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [counterValue, setCounterValue] = useState(0);
+
+  function incrementor() {
+     setCounterValue(counterValue + 1);
+     console.log("button clicked")
+  }
+
+  function decrementor() {
+    setCounterValue(counterValue - 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <div className="app-container"> 
+       
+      <Counter incrementor={incrementor} decrementor={decrementor} counterValue={counterValue} />
+     </div>
   );
 }
 
 export default App;
+
+/**App -
+      Manages the state(counter value) and logic(increment/decrement functions) */
